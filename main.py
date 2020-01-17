@@ -34,7 +34,7 @@ for i in range(0, len(image_list)):
 	
 	hb = QHBoxLayout()
 	hb.addWidget(label)
-	hb.width
+	# hb.width
 	
 	labelLis.append(hb)
 	
