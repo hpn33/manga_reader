@@ -1,9 +1,11 @@
 import os
 import sys
 
-from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QVBoxLayout, QHBoxLayout, QScrollArea, QFormLayout, QGroupBox, QPushButton
-from PyQt5.QtGui import QIcon, QPixmap
-
+from PySide2.QtCore import Qt
+from PySide2.QtGui import QPixmap
+from PySide2.QtWidgets import *
+# from PyQt5.QtWidgets import *
+# from PyQt5.QtGui import QPixmap
 
 app = QApplication(sys.argv)
 
@@ -27,14 +29,13 @@ max_width = 0
 for i in range(0, len(image_list)):
 	image_address = image_list[i]
 	
-	
 	label = QLabel()
 	pixmap = QPixmap(image_address)
 	label.setPixmap(pixmap)
+	label.setAlignment(Qt.AlignCenter)
 	
 	hb = QHBoxLayout()
 	hb.addWidget(label)
-	hb.width
 	
 	labelLis.append(hb)
 	
